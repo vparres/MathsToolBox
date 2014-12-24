@@ -2,7 +2,8 @@
 
     Sub Main()
         'Déclaration des variables
-        Dim Choix As Integer
+        Dim Choix As String
+        Dim null As String
         Dim A As Integer
         Dim B As Integer
         Dim C As Integer
@@ -20,8 +21,10 @@
         Dim YCB As Integer
 
         'Début du Programme
+Menu:
         Console.WriteLine("##############################################")
-        Console.WriteLine("##       Maths Tools v0.1 By VPARRES        ##")
+        Console.WriteLine("##          Maths ToolBox By VPARRES        ##")
+        Console.WriteLine("##            Version 0.2b Windows          ##")
         Console.WriteLine("##############################################")
         Console.WriteLine()
         Console.WriteLine("Programme a lancer :")
@@ -36,9 +39,15 @@
         Console.WriteLine("7. En quel point s'annule la fonction ?")
         Console.WriteLine("8. Tarifs centre de vacances")
         Console.WriteLine("9. Promotion du Magasin")
-        Console.WriteLine("10. Sortir du programme")
+        Console.WriteLine("Q. Sortir du programme")
         Console.Write("Entrez votre choix :")
         Choix = Console.ReadLine()
+        Console.WriteLine()
+        Console.Clear()
+        Console.WriteLine("##############################################")
+        Console.WriteLine("##          Maths ToolBox By VPARRES        ##")
+        Console.WriteLine("##            Version 0.2b Windows          ##")
+        Console.WriteLine("##############################################")
         Console.WriteLine()
         Select Case Choix
             Case "1"
@@ -154,12 +163,21 @@
                 End If
 
             Case "6", "7", "8", "9"
-                Console.WriteLine("Fonction non implentée")
-            Case "10"
+                Console.WriteLine("/!\ Erreur")
+                Console.WriteLine("------------------------------------")
+                Console.WriteLine("Fonction non implentée !")
+            Case "Q"
                 End
+            Case Else
+                Console.WriteLine("/!\ Erreur")
+                Console.WriteLine("------------------------------------")
+                Console.WriteLine("Choix incorrect !")
+                Console.WriteLine("Retour au Menu ...")
 
         End Select
-        Console.Read()
+        null = Console.ReadLine()
+        Console.Clear()
+        GoTo Menu
     End Sub
 
 End Module
