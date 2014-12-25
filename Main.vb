@@ -6,9 +6,6 @@ Module Main
         'Déclaration des variables
         Dim Choix As String
         Dim null As String
-        Dim Version As String
-        Dim Auteur As String
-        Dim DOTNETVERSION As String
         Dim A As Integer
         Dim B As Integer
         Dim C As Integer
@@ -34,16 +31,11 @@ Module Main
         Dim YAC As Integer
         Dim ZAC As Integer
 
-        'Variables système
-        Version = " 0.4.1b Windows"
-        Auteur = " Vincent PARRES (vparres)"
-        DOTNETVERSION = "4.5"
-
         'Début du Programme
 Menu:
         Console.WriteLine("##############################################")
         Console.WriteLine("##          Maths ToolBox By VPARRES        ##")
-        Console.WriteLine("##              " & Version & "             ##")
+        Console.WriteLine("##            Version 0.4b Windows          ##")
         Console.WriteLine("##############################################")
         Console.WriteLine()
         Console.WriteLine("Programme a lancer :")
@@ -58,14 +50,14 @@ Menu:
         Console.WriteLine("7. Distance d'un Vecteur")
         Console.WriteLine("----- Système -----")
         Console.WriteLine("A. A Propos")
-        Console.WriteLine("Q. Quitter l'Application")
+        Console.WriteLine("Q. Sortir du programme")
         Console.Write("Entrez votre choix :")
         Choix = Console.ReadLine()
         Console.WriteLine()
         Console.Clear()
         Console.WriteLine("##############################################")
         Console.WriteLine("##          Maths ToolBox By VPARRES        ##")
-        Console.WriteLine("##              " & Version & "             ##")
+        Console.WriteLine("##            Version 0.4b Windows          ##")
         Console.WriteLine("##############################################")
         Console.WriteLine()
         'Partie Vecteurs 2D
@@ -254,11 +246,9 @@ Menu:
                 Console.WriteLine("------------------------------------")
                 Console.WriteLine()
                 Console.WriteLine("Maths ToolBox")
-                Console.WriteLine("Version :" & Version)
-                Console.WriteLine("Auteur :" & Auteur)
-                Console.WriteLine("Version .Net Framework : " & DOTNETVERSION)
-                Console.WriteLine("Ce programme codé en VB.Net est ")
-                Console.WriteLine("Open-Source et Libre de droits.")
+                Console.WriteLine("Version : 0.4 Beta")
+                Console.WriteLine("Auteur : Vincent PARRES (vparres)")
+                Console.WriteLine("Codé en VB.net, .Net Framework 4.5")
             Case "8", "9"
                 Console.WriteLine("/!\ Erreur")
                 Console.WriteLine("------------------------------------")
