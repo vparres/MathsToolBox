@@ -1,0 +1,107 @@
+ClrHome
+Disp "================"," Maths Tool Box","   By VPARRES","================"
+Disp ""
+Disp "Version 0.1b TI"
+Disp "  Press Enter"
+Pause 
+ClrHome
+
+Lbl 0
+Disp " Maths Tool Box "
+Disp "===== Menu ====="
+Disp " 1: Vecteurs 2D "
+Disp " 2: Vecteurs 3D "
+Disp " 3:             "
+Disp " 4:             "
+Disp " 5: Plus ...    "
+Repeat F!=0
+getKey→F
+End
+If F=11 or F=12:Goto FI
+If F=13:Goto AP
+If F=92:Goto V
+If F=93:Goto VDD
+If F=94:Goto C
+If F=82:Goto D
+If F=83:Goto 1
+If F=14 or F=15:0→Z:Goto 0
+Else
+Goto 0
+End
+
+Lbl V
+Disp " Maths Tool Box "
+Disp "= Vecteurs  2D ="
+Disp " 1: Tri Rect ?  "
+Disp " 2: Quadrlatr //"
+Disp " 3: Droite //   "
+Disp " 4:             "
+Disp " 5: Retour Menu " 
+getKey→F
+If F=11 or F=12:Goto FI
+If F=13:Goto AP
+If F=92:Goto TR
+If F=93:Goto QDL
+If F=94:Goto DP
+If F=82:Goto ERR
+If F=83:Goto 1
+If F=14 or F=15:0→Z:Goto 0
+Else
+Goto 0
+End
+
+Lbl TR
+Lbl QDL
+Lbl DP
+
+Lbl VDD
+Disp " Maths Tool Box "
+Disp "= Vecteurs  3D ="
+Disp " 1: Vect Coliné "
+Disp " 2: Align 3 Pts "
+Disp " 3: Coord Vect  "
+Disp " 4: Distanc Vect"
+Disp " 5: Retour Menu " 
+getKey→F
+If F=11 or F=12:Goto FI
+If F=13:Goto VC
+If F=92:Goto APPP
+If F=93:Goto CV
+If F=94:Goto DV
+If F=82:Goto 0
+If F=83:Goto 1
+If F=14 or F=15:0→Z:Goto 0
+Else
+Goto 0
+End
+
+Lbl VC
+Lbl APPP
+
+Lbl CV
+ClrHome
+Input "Xa=",A
+Input "Ya=",B
+Input "Za=",C
+Input "Xb=",D
+Input "Yb=",E
+Input "Zb=",F
+
+D-A→G
+E-B→H
+F-C→I
+ClrHome
+Disp "Xab = ",G
+Disp "Yab = ",H
+Disp "Zab = ",I
+Pause 
+ClrHome
+G²+H²+I²→J
+sqrt(J)→K
+Disp "AB² = ",J>Frac
+Disp "sqrt(AB) = ",K>Frac
+Pause 
+Goto 0
+Lbl DV
+
+Lbl ERR

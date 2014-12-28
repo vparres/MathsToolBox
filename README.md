@@ -1,9 +1,11 @@
 MathsToolBox
 ============
 
-MathsToolBox est une petite application codée en Visual Basic.net qui a été intialement developpée par VPARRES pour un cours
-de Mathématiques de 2nd et elle permet de faire des calculs divers avec des vecteurs et des fonctions. Cette application est
+MathsToolBox est un programme codée en TI-BASIC z80 qui a été developpée par VPARRES pour un cours
+de Mathématiques de Terminale S et elle permet de faire des calculs divers avec des vecteurs. Cette application est
 modifiable librement et est distribuée sous license GPL v3.
 
-(!) Le developpement de cette application est inachevé pour l'instant : La partie calcul avec des fonctions n'est pas encore 
-developpée.
+(!) Le developpement de cette application est inachevé pour l'instant : Elle est pour l'instant non-fonctionnelle.
+Le programme se lance mais reste bloqué en boucle au menu principal.
+Le developpement de cette application est toujours en cours. Une version fonctionnelle pour Windows est disponible
+sur la branche Master.
