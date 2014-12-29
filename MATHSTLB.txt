@@ -1,7 +1,7 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.1b TI"
+Disp "Version 0.2b TI"
 Disp "  Press Enter"
 Pause 
 ClrHome
@@ -13,60 +13,90 @@ Disp " 1: Vecteurs 2D "
 Disp " 2: Vecteurs 3D "
 Disp " 3:             "
 Disp " 4:             "
-Disp " 5: Plus ...    "
-Repeat F!=0
+Disp " 5: Plus …      "
+Repeat F≠0
 getKey→F
 End
 If F=11 or F=12:Goto FI
 If F=13:Goto AP
 If F=92:Goto V
-If F=93:Goto VDD
-If F=94:Goto C
-If F=82:Goto D
+If F=93:Goto VD
+If F=94:Goto ER
+If F=82:Goto ER
 If F=83:Goto 1
 If F=14 or F=15:0→Z:Goto 0
 Else
 Goto 0
 End
 
+Lbl 1
+ClrHome
+Disp " Maths Tool Box "
+Disp "===== Menu ====="
+Disp " 1: A Propos    "
+Disp " 2:             "
+Disp " 3:             "
+Disp " 4:             "
+Disp " 5: Quitter …   "
+Repeat F≠0
+getKey→F
+End
+If F=11 or F=12:Goto FI
+If F=13:Goto AP
+If F=92:Goto AP
+If F=93:Goto ER
+If F=94:Goto ER
+If F=82:Goto ER
+If F=83:Goto Q
+If F=14 or F=15:0→Z:Goto 0
+Else
+Goto 1
+End
+
 Lbl V
+ClrHome
 Disp " Maths Tool Box "
 Disp "= Vecteurs  2D ="
 Disp " 1: Tri Rect ?  "
 Disp " 2: Quadrlatr //"
 Disp " 3: Droite //   "
 Disp " 4:             "
-Disp " 5: Retour Menu " 
+Disp " 5: Retour Menu "
+Repeat F≠0
 getKey→F
+End
 If F=11 or F=12:Goto FI
 If F=13:Goto AP
 If F=92:Goto TR
-If F=93:Goto QDL
+If F=93:Goto QL
 If F=94:Goto DP
-If F=82:Goto ERR
-If F=83:Goto 1
+If F=82:Goto ER
+If F=83:Goto 0
 If F=14 or F=15:0→Z:Goto 0
 Else
 Goto 0
 End
 
 Lbl TR
-Lbl QDL
+Lbl QL
 Lbl DP
 
-Lbl VDD
+Lbl VD
+ClrHome
 Disp " Maths Tool Box "
 Disp "= Vecteurs  3D ="
-Disp " 1: Vect Coliné "
+Disp " 1: Coord Vect  "
 Disp " 2: Align 3 Pts "
-Disp " 3: Coord Vect  "
+Disp " 3: Vect Coliné "
 Disp " 4: Distanc Vect"
-Disp " 5: Retour Menu " 
+Disp " 5: Retour Menu "
+Repeat F≠0
 getKey→F
+End
 If F=11 or F=12:Goto FI
 If F=13:Goto VC
-If F=92:Goto APPP
-If F=93:Goto CV
+If F=92:Goto C
+If F=93:Goto A
 If F=94:Goto DV
 If F=82:Goto 0
 If F=83:Goto 1
@@ -75,10 +105,7 @@ Else
 Goto 0
 End
 
-Lbl VC
-Lbl APPP
-
-Lbl CV
+Lbl C
 ClrHome
 Input "Xa=",A
 Input "Ya=",B
@@ -97,11 +124,20 @@ Disp "Zab = ",I
 Pause 
 ClrHome
 G²+H²+I²→J
-sqrt(J)→K
-Disp "AB² = ",J>Frac
-Disp "sqrt(AB) = ",K>Frac
+√(J)→K
+Disp "AB² = ",J►Frac
+Disp "√(AB) = ",K►Frac
 Pause 
 Goto 0
-Lbl DV
 
-Lbl ERR
+Lbl ER
+ClrHome
+Disp " Maths Tool Box "
+Disp "==== Erreur ===="
+Disp "                "
+Disp " Une Erreur est "
+Disp " survenue !     "
+Disp "                "
+Disp " Retour au Menu "
+Pause 
+Goto 0
