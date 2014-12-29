@@ -1,93 +1,26 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.2.2bTI"
+Disp "Version 0.3b TI"
 Disp "  Press Enter"
 Pause 
 
 Lbl 0
 ClrHome
-Disp " Maths Tool Box "
-Disp "===== Menu ====="
-Disp " 1: Vecteurs 2D "
-Disp " 2: Vecteurs 3D "
-Disp " 3: "
-Disp " 4: "
-Disp " 5: Plus …      "
-Repeat F≠0
-getKey→F
-End
-If F=92:Goto V
-If F=93:Goto VD
-If F=94:Goto ER
-If F=82:Goto ER
-If F=83:Goto 1
-Else
-Goto 0
-End
+Menu("Maths Tool Box","Vecteurs 2D",V,"Vecteurs 3D",VD,"Plus ...",1
 
 Lbl 1
 ClrHome
-Disp " Maths Tool Box "
-Disp "===== Menu ====="
-Disp " 1: A Propos    "
-Disp " 2:"
-Disp " 3:"
-Disp " 4:"
-Disp " 5: Quitter …   "
-Repeat F≠0
-getKey→F
-End
-If F=92:Goto AP
-If F=93:Goto ER
-If F=94:Goto ER
-If F=82:Goto ER
-If F=83:Goto Q
-Else
-Goto 1
-End
+Menu("Maths Tool Box","A Propos ...",AP,"Quitter ...",Q
 
 Lbl V
 ClrHome
-Disp " Maths Tool Box "
-Disp "= Vecteurs  2D ="
-Disp " 1: Tri Rect ?  "
-Disp " 2: Quadrlatr //"
-Disp " 3: Droite //   "
-Disp " 4: "
-Disp " 5: Retour Menu "
-Repeat F≠0
-getKey→F
-End
-If F=92:Goto ER
-If F=93:Goto ER
-If F=94:Goto ER
-If F=82:Goto ER
-If F=83:Goto 0
-Else
-Goto 0
-End
+Menu("Vecteurs 2D","Tri Rect ?",ER,"Quadrlatr //",ER,"Droite //",ER,"Retour Menu",0
+
 
 Lbl VD
 ClrHome
-Disp " Maths Tool Box "
-Disp "= Vecteurs  3D ="
-Disp " 1: Coord Vect  "
-Disp " 2: Align 3 Pts "
-Disp " 3: Vect Coliné "
-Disp " 4: Distanc Vect"
-Disp " 5: Retour Menu "
-Repeat F≠0
-getKey→F
-End
-If F=92:Goto C
-If F=93:Goto ER
-If F=94:Goto ER
-If F=82:Goto ER
-If F=83:Goto 0
-Else
-Goto 0
-End
+Menu("Vecteurs 3D","Coord Vect",C,"Align 3 Pts",ER,"Vect Coliné",ER,"Distance Vect",ER,"Retour Menu",0
 
 Lbl C
 ClrHome
@@ -110,10 +43,10 @@ Disp "Zab = ",I
 Pause 
 ClrHome
 G²+H²+I²→J
-√(J)→K
+sqrt(J)→K
 Disp "== Coord Vect =="
-Disp "AB² = ",J►Frac
-Disp "√(AB) = ",K►Frac
+Disp "AB² = ",J>Frac
+Disp "sqrt(AB) = ",K>Frac
 Pause 
 Goto 0
 
@@ -122,8 +55,8 @@ ClrHome
 Disp " Maths Tool Box "
 Disp "=== A Propos ==="
 Disp "Auteur:VPARRES"
-Disp "Version:0.2.2 TI"
-Disp "Platforme:z80 "
+Disp "Version:0.3 TI"
+Disp "Platforme:z80"
 Disp ""
 Disp "Retour au Menu"
 Pause 
