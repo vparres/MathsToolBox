@@ -8,6 +8,7 @@ Module Main
         Dim null As String
         Dim Version As String
         Dim Auteur As String
+        Dim Platforme As String
         Dim DOTNETVERSION As String
         Dim A As Integer
         Dim B As Integer
@@ -35,9 +36,10 @@ Module Main
         Dim ZAC As Integer
 
         'Variables système
-        Version = " 0.4.1b Windows"
+        Version = " 0.4.2b Windows"
         Auteur = " Vincent PARRES (vparres)"
-        DOTNETVERSION = "4.5"
+        Platforme = " x86"
+        DOTNETVERSION = "4.0"
 
         'Début du Programme
 Menu:
@@ -49,13 +51,14 @@ Menu:
         Console.WriteLine("Programme a lancer :")
         Console.WriteLine("----- Vecteurs (2D) -----")
         Console.WriteLine("1. Triangle rectangle ou non ?")
-        Console.WriteLine("2. Quadrilatère Parallélogramme ou non ?")
-        Console.WriteLine("3. Droite parallèle ou non ?")
+        Console.WriteLine("2. Droite parallèle ou non ?")
         Console.WriteLine("----- Vecteurs (3D) -----")
+        Console.WriteLine("3. Quadrilatère Parallélogramme ou non ?")
         Console.WriteLine("4. Vecteurs Colinéaires ou non ?")
         Console.WriteLine("5. Test de l'alignement de 3 points")
         Console.WriteLine("6. Coordonnées d'un Vecteur")
         Console.WriteLine("7. Distance d'un Vecteur")
+        Console.WriteLine("8. Coplanarité de 4 Points")
         Console.WriteLine("----- Système -----")
         Console.WriteLine("A. A Propos")
         Console.WriteLine("Q. Quitter l'Application")
@@ -85,33 +88,8 @@ Menu:
                 Else
                     Console.WriteLine("Verdict : Le triangle n'est pas rectangle")
                 End If
-            Case "2"
-                Console.WriteLine("Programme : Quadrilatère Parallélogramme ou non ?")
-                Console.WriteLine("------------------------------------------------")
-                Console.WriteLine()
-                Console.Write("Entrez Xa : ")
-                XA = Console.ReadLine()
-                Console.Write("Entrez Ya : ")
-                YA = Console.ReadLine()
-                Console.Write("Entrez Xb : ")
-                XB = Console.ReadLine()
-                Console.Write("Entrez Yb : ")
-                YB = Console.ReadLine()
-                Console.Write("Entrez Xc : ")
-                XC = Console.ReadLine()
-                Console.Write("Entrez Yc : ")
-                YC = Console.ReadLine()
-                Console.Write("Entrez Xd : ")
-                XD = Console.ReadLine()
-                Console.Write("Entrez Yd : ")
-                YD = Console.ReadLine()
-                If ((XA + XC) / 2) = ((XB + XD) / 2) And ((YA + YC) / 2) = ((YB + YC) / 2) Then
-                    Console.WriteLine("Verdict : Le Quadrilatère est un parallélogramme")
-                Else
-                    Console.WriteLine("Verdict : Le Quadrilatère n'est pas parallélogramme")
-                End If
 
-            Case "3"
+            Case "2"
                 Console.WriteLine("Programme : Droite parallèle ou non ?")
                 Console.WriteLine("------------------------------------")
                 Console.WriteLine()
@@ -139,6 +117,40 @@ Menu:
                 End If
 
                 'Partie Vecteur 3D
+            Case "3"
+                Console.WriteLine("Programme : Quadrilatère Parallélogramme ou non ?")
+                Console.WriteLine("------------------------------------------------")
+                Console.WriteLine()
+                Console.Write("Entrez Xa : ")
+                XA = Console.ReadLine()
+                Console.Write("Entrez Ya : ")
+                YA = Console.ReadLine()
+                Console.Write("Entrez Za : ")
+                ZA = Console.ReadLine()
+                Console.Write("Entrez Xb : ")
+                XB = Console.ReadLine()
+                Console.Write("Entrez Yb : ")
+                YB = Console.ReadLine()
+                Console.Write("Entrez Zb : ")
+                ZB = Console.ReadLine()
+                Console.Write("Entrez Xc : ")
+                XC = Console.ReadLine()
+                Console.Write("Entrez Yc : ")
+                YC = Console.ReadLine()
+                Console.Write("Entrez Zc : ")
+                ZC = Console.ReadLine()
+                Console.Write("Entrez Xd : ")
+                XD = Console.ReadLine()
+                Console.Write("Entrez Yd : ")
+                YD = Console.ReadLine()
+                Console.Write("Entrez Zd : ")
+                ZD = Console.ReadLine()
+                If ((XA + XC) / 2) = ((XB + XD) / 2) And ((YA + YC) / 2) = ((YB + YD) / 2) And ((ZA + ZC) / 2) = ((ZB + ZD) / 2) Then
+                    Console.WriteLine("Verdict : Le Quadrilatère est un parallélogramme")
+                Else
+                    Console.WriteLine("Verdict : Le Quadrilatère n'est pas parallélogramme")
+                End If
+
             Case "4"
                 Console.WriteLine("Programme : Vecteurs Colinéaires ou non ?")
                 Console.WriteLine("----------------------------------------")
@@ -248,6 +260,7 @@ Menu:
                 Console.WriteLine("Distance du Vecteur :")
                 Console.WriteLine("AB² = " & A)
                 Console.WriteLine("√(AB) = " & B)
+
                 'Partie Système
             Case "A"
                 Console.WriteLine("A Propos ...")
@@ -255,17 +268,21 @@ Menu:
                 Console.WriteLine()
                 Console.WriteLine("Maths ToolBox")
                 Console.WriteLine("Version :" & Version)
+                Console.WriteLine("Plateforme :" & Platforme)
                 Console.WriteLine("Auteur :" & Auteur)
                 Console.WriteLine("Version .Net Framework : " & DOTNETVERSION)
                 Console.WriteLine("Ce programme codé en VB.Net est ")
                 Console.WriteLine("Open-Source et Libre de droits.")
             Case "8", "9"
+                Console.Beep()
                 Console.WriteLine("/!\ Erreur")
                 Console.WriteLine("------------------------------------")
                 Console.WriteLine("Fonction non implentée !")
             Case "Q"
                 End
             Case Else
+                Console.Beep()
+                Console.Beep()
                 Console.WriteLine("/!\ Erreur")
                 Console.WriteLine("------------------------------------")
                 Console.WriteLine("Choix incorrect !")
