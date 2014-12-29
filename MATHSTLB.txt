@@ -1,7 +1,7 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.2b TI"
+Disp "Version 0.2.1b TI"
 Disp "  Press Enter"
 Pause 
 ClrHome
@@ -11,20 +11,17 @@ Disp " Maths Tool Box "
 Disp "===== Menu ====="
 Disp " 1: Vecteurs 2D "
 Disp " 2: Vecteurs 3D "
-Disp " 3:             "
-Disp " 4:             "
+Disp " 3: "
+Disp " 4: "
 Disp " 5: Plus …      "
 Repeat F≠0
 getKey→F
 End
-If F=11 or F=12:Goto FI
-If F=13:Goto AP
 If F=92:Goto V
 If F=93:Goto VD
 If F=94:Goto ER
 If F=82:Goto ER
 If F=83:Goto 1
-If F=14 or F=15:0→Z:Goto 0
 Else
 Goto 0
 End
@@ -34,21 +31,18 @@ ClrHome
 Disp " Maths Tool Box "
 Disp "===== Menu ====="
 Disp " 1: A Propos    "
-Disp " 2:             "
-Disp " 3:             "
-Disp " 4:             "
+Disp " 2:"
+Disp " 3:"
+Disp " 4:"
 Disp " 5: Quitter …   "
 Repeat F≠0
 getKey→F
 End
-If F=11 or F=12:Goto FI
-If F=13:Goto AP
 If F=92:Goto AP
 If F=93:Goto ER
 If F=94:Goto ER
 If F=82:Goto ER
 If F=83:Goto Q
-If F=14 or F=15:0→Z:Goto 0
 Else
 Goto 1
 End
@@ -60,19 +54,16 @@ Disp "= Vecteurs  2D ="
 Disp " 1: Tri Rect ?  "
 Disp " 2: Quadrlatr //"
 Disp " 3: Droite //   "
-Disp " 4:             "
+Disp " 4: "
 Disp " 5: Retour Menu "
 Repeat F≠0
 getKey→F
 End
-If F=11 or F=12:Goto FI
-If F=13:Goto AP
 If F=92:Goto TR
 If F=93:Goto QL
 If F=94:Goto DP
 If F=82:Goto ER
 If F=83:Goto 0
-If F=14 or F=15:0→Z:Goto 0
 Else
 Goto 0
 End
@@ -93,14 +84,11 @@ Disp " 5: Retour Menu "
 Repeat F≠0
 getKey→F
 End
-If F=11 or F=12:Goto FI
-If F=13:Goto VC
 If F=92:Goto C
 If F=93:Goto A
 If F=94:Goto DV
 If F=82:Goto 0
 If F=83:Goto 1
-If F=14 or F=15:0→Z:Goto 0
 Else
 Goto 0
 End
@@ -134,10 +122,10 @@ Lbl ER
 ClrHome
 Disp " Maths Tool Box "
 Disp "==== Erreur ===="
-Disp "                "
+Disp ""
 Disp " Une Erreur est "
 Disp " survenue !     "
-Disp "                "
+Disp ""
 Disp " Retour au Menu "
 Pause 
 Goto 0
