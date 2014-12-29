@@ -6,4 +6,4 @@ de Mathématiques de Terminale S et elle permet de faire des calculs divers avec
 modifiable librement et est distribuée sous license GPL v3.
 
 (!) Le developpement de cette application est inachevé pour l'instant : Le developpement de cette application est toujours en cours. Une version fonctionnelle pour Windows est disponible
-sur la branche Master.
+sur la branche "master".

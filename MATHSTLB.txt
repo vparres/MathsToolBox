@@ -1,12 +1,12 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.2.1b TI"
+Disp "Version 0.2.2bTI"
 Disp "  Press Enter"
 Pause 
-ClrHome
 
 Lbl 0
+ClrHome
 Disp " Maths Tool Box "
 Disp "===== Menu ====="
 Disp " 1: Vecteurs 2D "
@@ -59,18 +59,14 @@ Disp " 5: Retour Menu "
 Repeat F≠0
 getKey→F
 End
-If F=92:Goto TR
-If F=93:Goto QL
-If F=94:Goto DP
+If F=92:Goto ER
+If F=93:Goto ER
+If F=94:Goto ER
 If F=82:Goto ER
 If F=83:Goto 0
 Else
 Goto 0
 End
-
-Lbl TR
-Lbl QL
-Lbl DP
 
 Lbl VD
 ClrHome
@@ -85,16 +81,17 @@ Repeat F≠0
 getKey→F
 End
 If F=92:Goto C
-If F=93:Goto A
-If F=94:Goto DV
-If F=82:Goto 0
-If F=83:Goto 1
+If F=93:Goto ER
+If F=94:Goto ER
+If F=82:Goto ER
+If F=83:Goto 0
 Else
 Goto 0
 End
 
 Lbl C
 ClrHome
+Disp "== Coord Vect =="
 Input "Xa=",A
 Input "Ya=",B
 Input "Za=",C
@@ -106,6 +103,7 @@ D-A→G
 E-B→H
 F-C→I
 ClrHome
+Disp "== Coord Vect =="
 Disp "Xab = ",G
 Disp "Yab = ",H
 Disp "Zab = ",I
@@ -113,8 +111,21 @@ Pause
 ClrHome
 G²+H²+I²→J
 √(J)→K
+Disp "== Coord Vect =="
 Disp "AB² = ",J►Frac
 Disp "√(AB) = ",K►Frac
+Pause 
+Goto 0
+
+Lbl AP
+ClrHome
+Disp " Maths Tool Box "
+Disp "=== A Propos ==="
+Disp "Auteur:VPARRES"
+Disp "Version:0.2.2 TI"
+Disp "Platforme:z80 "
+Disp ""
+Disp "Retour au Menu"
 Pause 
 Goto 0
 
@@ -129,3 +140,6 @@ Disp ""
 Disp " Retour au Menu "
 Pause 
 Goto 0
+
+Lbl Q
+Stop
