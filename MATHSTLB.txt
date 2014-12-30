@@ -1,26 +1,56 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.3b TI"
+Disp "Version 0.3.1bTI"
 Disp "  Press Enter"
 Pause 
 
 Lbl 0
 ClrHome
-Menu("Maths Tool Box","Vecteurs 2D",V,"Vecteurs 3D",VD,"Plus ...",1
+Menu("Maths Tool Box","Vecteurs 2D",V,"Vecteurs 3D",VD,"Plus …",1
 
 Lbl 1
 ClrHome
-Menu("Maths Tool Box","A Propos ...",AP,"Quitter ...",Q
+Menu("Maths Tool Box","A Propos …",AP,"Quitter …",Q
 
 Lbl V
 ClrHome
-Menu("Vecteurs 2D","Tri Rect ?",ER,"Quadrlatr //",ER,"Droite //",ER,"Retour Menu",0
+Menu("Vecteurs 2D","Tri Rect ?",ER,"Droite //",ER,"Retour Menu",0
 
 
 Lbl VD
 ClrHome
-Menu("Vecteurs 3D","Coord Vect",C,"Align 3 Pts",ER,"Vect Coliné",ER,"Distance Vect",ER,"Retour Menu",0
+Menu("Vecteurs 3D","Coord Vect",C,"Align 3 Pts",PT,"Vect Coliné",ER,"Distance Vect",ER,"Quadrlatr //",ER,"Retour Menu",0
+
+Lbl PT
+Disp "= Align 3 Pts ="
+Input "Xa=",A
+Input "Ya=",B
+Input "Za=",C
+Input "Xb=",D
+Input "Yb=",E
+Input "Zb=",F
+Input "Xc=",G
+Input "Yc=",H
+Input "Zc=",I
+
+D-A→J
+E-B→K
+F-C→L
+G-A→M
+H-B→N
+I-C→O
+
+ClrHome
+Disp "= Align 3 Pts =","","Verdict :"
+If J/M=K/N=L/O
+Then
+Disp "ABC sont alignés"
+Else
+Disp "ABC non alignés"
+End
+Pause 
+Goto 0
 
 Lbl C
 ClrHome
@@ -43,10 +73,10 @@ Disp "Zab = ",I
 Pause 
 ClrHome
 G²+H²+I²→J
-sqrt(J)→K
+√(J)→K
 Disp "== Coord Vect =="
-Disp "AB² = ",J>Frac
-Disp "sqrt(AB) = ",K>Frac
+Disp "AB² = ",J►Frac
+Disp "√(AB) = ",K►Frac
 Pause 
 Goto 0
 
@@ -55,7 +85,7 @@ ClrHome
 Disp " Maths Tool Box "
 Disp "=== A Propos ==="
 Disp "Auteur:VPARRES"
-Disp "Version:0.3 TI"
+Disp "Version:0.3.1bTI"
 Disp "Platforme:z80"
 Disp ""
 Disp "Retour au Menu"
