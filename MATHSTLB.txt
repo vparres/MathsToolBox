@@ -1,7 +1,7 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.3.1bTI"
+Disp "Version 0.4b TI"
 Disp "  Press Enter"
 Pause 
 
@@ -75,7 +75,7 @@ ClrHome
 G²+H²+I²→J
 √(J)→K
 Disp "== Coord Vect =="
-Disp "AB² = ",J►Frac
+Disp "AB² = ","Xab²+Yab²+Zab²",J►Frac
 Disp "√(AB) = ",K►Frac
 Pause 
 Goto 0
@@ -85,7 +85,7 @@ ClrHome
 Disp " Maths Tool Box "
 Disp "=== A Propos ==="
 Disp "Auteur:VPARRES"
-Disp "Version:0.3.1bTI"
+Disp "Version:0.4b TI"
 Disp "Platforme:z80"
 Disp ""
 Disp "Retour au Menu"

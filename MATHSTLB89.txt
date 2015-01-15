@@ -1,0 +1,229 @@
+()
+Prgm
+ClrIO
+Disp "=========================="," Maths Tool Box By VPARRES","=========================="
+Disp "      Version 0.4bTI"
+Disp "       Press Enter"
+Pause
+
+Lbl menu
+ClrIO
+Dialog
+Title "Maths Toolbox by VPARRES"
+Text "Menu Principal"
+DropDown "Faites votre choix:", {"Vecteurs 2D", "Vecteurs 3D", "A Propos","NetVars", "Quitter"}, choix
+EndDlog
+If choix=1 Then 
+Goto V2D
+ElseIf choix=2
+Goto V3D
+ElseIf choix=3
+Goto AP
+ElseIf choix=4
+Goto netvar
+ElseIf choix=5
+Goto Q
+Else
+Goto error
+Endif
+
+Lbl V2D
+Dialog
+Title "Maths Toolbox by VPARRES"
+Text "Vecteurs 2D"
+DropDown "Choix:", {"Tri Rect ?", "Droite //", "Retour Menu"}, choix
+EndDlog
+If choix=1 Then 
+Goto noimpl
+ElseIf choix=2
+Goto noimpl
+ElseIf choix=3
+Goto menu
+Else
+Goto error
+Endif
+
+Lbl V3D
+Dialog
+Title "Maths Toolbox by VPARRES"
+Text "Vecteurs 3D"
+DropDown "Choix:", {"Coord Vect", "Align 3 Pts", "Vect Coliné", "Distance Vect", "Quadrlatr //", "Retour Menu"}, choix
+EndDlog
+If choix=1 Then 
+Goto coorvec
+ElseIf choix=2
+Goto A3PT
+ElseIf choix=6
+Goto menu
+Else
+Goto error
+Endif
+
+Lbl coorvec
+ClrIO
+Disp "== Coordonnées Vect =="
+Disp "Entrée des valeurs ..."
+Dialog
+Title "Coord Vect"
+Request "Xa ",A,0
+Request "Ya ",B,0
+Request "Za ",C,0
+EndDlog
+Dialog
+Request "Xb ",D,0
+Request "Yb ",E,0
+Request "Zb ",F,0
+EndDlog
+
+Expr(A)A
+Expr(B)B
+Expr(C)C
+Expr(D)D
+Expr(E)E
+Expr(F)F
+
+Disp "Calculs en cours ..."
+D-AG
+E-BH
+F-CI
+Disp "Terminé"
+Disp "Affichage coordonnées :"
+Disp "Xab = ",G
+Disp "Yab = ",H
+Disp "Zab = ",I
+Pause
+Disp "Calculs en cours ..."
+G^2+H^2+I^2J
+¨(J)K
+Disp "Terminé"
+ClrIO
+Disp "== Coordonnées Vect =="
+Disp "Xab²+Yab²+Zab² = AB² = ",J
+Disp "¨(AB) = ",K
+Pause 
+Dialog
+Title "Nettoyage"
+Text "Voulez-vous nettoyer"
+Text "les Variables ?"
+EndDlog
+If ok=1 then
+Goto netvar
+Else 
+Goto menu
+Endif
+
+Lbl A3PT
+ClrIO
+Disp "== Alignement de 3 Pts =="
+Disp "Entrée des valeurs ..."
+Dialog
+Title "Align 3 Pts"
+Request "Xa ",A,0
+Request "Ya ",B,0
+Request "Za ",C,0
+Request "Xb ",D,0
+EndDlog
+Dialog
+Title "Align 3 Pts"
+Request "Yb ",E,0
+Request "Zb ",F,0
+Request "Xc ",G,0
+Request "Yc ",H,0
+Request "Zc ",I,0
+EndDlog
+Disp "Calcul en cours ..."
+Expr(A)A
+Expr(B)B
+Expr(C)C
+Expr(D)D
+Expr(E)E
+Expr(F)F
+Expr(G)G
+Expr(H)H
+Expr(I)I
+D-AJ
+E-BK
+F-CL
+G-AM
+H-BN
+I-CO
+J/KP
+K/NQ
+L/OR
+Disp "Terminé !"
+
+ClrIO
+Disp "== Alignement de 3 Pts ==","","Verdict :"
+If P=Q and Q=R Then
+Disp "ABC sont alignés"
+Else
+Disp "ABC non alignés"
+EndIf
+Pause 
+Dialog
+Title "Nettoyage"
+Text "Voulez-vous nettoyer"
+Text "les Variables ?"
+EndDlog
+If ok=1 then
+Goto netvar
+Else 
+Goto menu
+Endif
+
+Lbl netvar
+Disp "Nettoyage des variables ..."
+DelVar A
+DelVar B
+DelVar C
+DelVar D
+DelVar E
+DelVar F
+DelVar G
+DelVar H
+DelVar I
+DelVar J
+DelVar K
+DelVar L
+DelVar M
+DelVar N
+DelVar O
+Disp "Terminé !"
+Pause
+Goto menu
+
+Lbl AP
+ClrIO
+Dialog
+Title "A Propos"
+Text "Maths ToolBox"
+Text "Auteur : Vincent PARRES (vparres)"
+Text "Version : 0.4b TI"
+Text "Platforme : 68k"
+EndDlog
+Goto Menu
+
+Lbl noimpl
+ClrIO
+Disp " Maths Tool Box By VPARRES","=========================="
+Disp "Une Erreur est survenue :"
+Disp "Fonction non implentée. "
+Disp ""
+Disp "Retour au Menu ..."
+Pause
+Goto menu
+
+Lbl error
+ClrIO
+Disp " Maths Tool Box By VPARRES","=========================="
+Disp "Une Erreur est survenue ..."
+Disp ""
+Disp "Retour au Menu ..."
+Pause
+Goto menu
+
+Lbl Q
+ClrIO
+Disp " Maths Tool Box By VPARRES","=========================="
+Disp "Press ESC to exit ..."
+EndPrgm
