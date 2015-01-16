@@ -2,7 +2,7 @@
 Prgm
 ClrIO
 Disp "=========================="," Maths Tool Box By VPARRES","=========================="
-Disp "     Version 0.4.1b TI"
+Disp "    Version 0.4.2b TI"
 Disp "       Press Enter"
 Pause
 
@@ -53,15 +53,17 @@ If choix=1 Then
 Goto coorvec
 ElseIf choix=2
 Goto A3PT
+ElseIf choix=3
+Goto veccoli
 ElseIf choix=6
 Goto menu
 Else
-Goto error
+Goto noimpl
 Endif
 
 Lbl coorvec
 ClrIO
-Disp "== Coordonnées Vect =="
+Disp "=== Coordonnées Vect ==="
 Disp "Entrée des valeurs ..."
 Dialog
 Title "Coord Vect"
@@ -70,6 +72,7 @@ Request "Ya ",B,0
 Request "Za ",C,0
 EndDlog
 Dialog
+Title "Coord Vect"
 Request "Xb ",D,0
 Request "Yb ",E,0
 Request "Zb ",F,0
@@ -181,6 +184,61 @@ Else
 Goto menu
 Endif
 
+Lbl veccoli
+ClrIO
+Disp "=== Vect Colinéaires ==="
+Disp "Entrée des valeurs ..."
+Dialog
+Title "Vect Coliné"
+Request "Xa ",A,0
+Request "Ya ",B,0
+Request "Za ",C,0
+EndDlog
+Dialog
+Title "Vect Coliné"
+Request "Xb ",D,0
+Request "Yb ",E,0
+Request "Zb ",F,0
+EndDlog
+ClrIO
+Disp "=== Vect Colinéaires ==="
+Disp "Xa = "&A&"       Xb = "&D
+Disp "Ya = "&B&"       Yb = "&E
+Disp "Za = "&C&"       Zb = "&F
+Pause
+
+Disp "Calculs en cours ..."
+Expr(A)A
+Expr(B)B
+Expr(C)C
+Expr(D)D
+Expr(E)E
+Expr(F)F
+A/DG
+B/EH
+C/FI
+Disp "Terminé !"
+
+Disp "Affichage du résultat :"
+ClrIO
+Disp "Verdict :"
+If G=H and H=I Then
+Disp "Les Vecteurs sont ","Colinéaires"
+Else
+Disp "Les Vecteurs ne sont","pas Colinéaires"
+EndIf
+Pause 
+Dialog
+Title "Nettoyage"
+Text "Voulez-vous nettoyer"
+Text "les Variables ?"
+EndDlog
+If ok=1 then
+Goto netvar
+Else 
+Goto menu
+Endif
+
 Lbl netvar
 Disp "Nettoyage des variables ..."
 DelVar A
@@ -212,7 +270,7 @@ Dialog
 Title "A Propos"
 Text "Maths ToolBox"
 Text "Auteur : Vincent PARRES (vparres)"
-Text "Version : 0.4.1b TI"
+Text "Version : 0.4.2b TI"
 Text "Platforme : 68k"
 EndDlog
 Goto Menu

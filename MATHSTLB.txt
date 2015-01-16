@@ -1,7 +1,7 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.4.1bTI"
+Disp "Version 0.4.2bTI"
 Disp "  Press Enter"
 Pause 
 
@@ -20,7 +20,7 @@ Menu("Vecteurs 2D","Tri Rect ?",ER,"Droite //",ER,"Retour Menu",0
 
 Lbl VD
 ClrHome
-Menu("Vecteurs 3D","Coord Vect",C,"Align 3 Pts",PT,"Vect Coliné",ER,"Distance Vect",ER,"Quadrlatr //",ER,"Retour Menu",0
+Menu("Vecteurs 3D","Coord Vect",C,"Align 3 Pts",PT,"Vect Coliné",VC,"Distance Vect",ER,"Quadrlatr //",ER,"Retour Menu",0
 
 Lbl PT
 Disp "= Align 3 Pts ="
@@ -82,12 +82,36 @@ Disp "√(AB) = ",K►Frac
 Pause 
 Goto 0
 
+Lbl VC
+ClrHome
+Disp "== Vec Coliné =="
+Input "Xa=",A
+Input "Ya=",B
+Input "Za=",C
+Input "Xb=",D
+Input "Yb=",E
+Input "Zb=",F
+
+A/D→G
+B/E→H
+C/F→I
+ClrHome
+Disp "== Vec Coliné =="
+If G=H=I
+Then
+Disp "","Les Vecteurs","sont colinéaires"
+Else
+Disp "","Les Vecteurs ne","sont pas","colinéaires"
+End
+Pause 
+Goto 0
+
 Lbl AP
 ClrHome
 Disp " Maths Tool Box "
 Disp "=== A Propos ==="
 Disp "Auteur:VPARRES"
-Disp "Version:0.4.1bTI"
+Disp "Version:0.4.2bTI"
 Disp "Platforme:z80"
 Disp ""
 Disp "Retour au Menu"
