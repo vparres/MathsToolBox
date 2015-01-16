@@ -2,7 +2,7 @@
 Prgm
 ClrIO
 Disp "=========================="," Maths Tool Box By VPARRES","=========================="
-Disp "      Version 0.4bTI"
+Disp "     Version 0.4.1b TI"
 Disp "       Press Enter"
 Pause
 
@@ -74,33 +74,43 @@ Request "Xb ",D,0
 Request "Yb ",E,0
 Request "Zb ",F,0
 EndDlog
+ClrIO
+Disp "=== Coordonnées Vect ==="
+Disp "Xa = "&A&"       Xb = "&D
+Disp "Ya = "&B&"       Yb = "&E
+Disp "Za = "&C&"       Zb = "&F
+Pause
 
+Disp "Calculs en cours 1/2..."
 Expr(A)A
 Expr(B)B
 Expr(C)C
 Expr(D)D
 Expr(E)E
 Expr(F)F
-
-Disp "Calculs en cours ..."
 D-AG
 E-BH
 F-CI
 Disp "Terminé"
-Disp "Affichage coordonnées :"
-Disp "Xab = ",G
-Disp "Yab = ",H
-Disp "Zab = ",I
-Pause
-Disp "Calculs en cours ..."
+
+Disp "Calculs en cours 2/2..."
 G^2+H^2+I^2J
 ¨(J)K
+String(G)L
+String(H)M
+String(I)N
+String(J)O
+String(K)P
 Disp "Terminé"
+
 ClrIO
-Disp "== Coordonnées Vect =="
-Disp "Xab²+Yab²+Zab² = AB² = ",J
-Disp "¨(AB) = ",K
-Pause 
+Disp "=== Coordonnées Vect ==="
+Disp "AB² = Xab² + Yab² + Zab²"
+DIsp "AB² = "&L&"² + "&M&"² + "&N&"²"
+Disp "AB² = "&O
+Disp "¨(AB) = "&P
+Pause
+
 Dialog
 Title "Nettoyage"
 Text "Voulez-vous nettoyer"
@@ -188,6 +198,10 @@ DelVar L
 DelVar M
 DelVar N
 DelVar O
+DelVar P
+DelVar Q
+DelVar R
+DelVar S
 Disp "Terminé !"
 Pause
 Goto menu
@@ -198,7 +212,7 @@ Dialog
 Title "A Propos"
 Text "Maths ToolBox"
 Text "Auteur : Vincent PARRES (vparres)"
-Text "Version : 0.4b TI"
+Text "Version : 0.4.1b TI"
 Text "Platforme : 68k"
 EndDlog
 Goto Menu
