@@ -36,7 +36,7 @@ Module Main
         Dim ZAC As Integer
 
         'Variables système
-        Version = " 0.4.2b Windows"
+        Version = " 0.4.3b Windows"
         Auteur = " Vincent PARRES (vparres)"
         Platforme = " x86"
         DOTNETVERSION = "4.0"
@@ -167,7 +167,12 @@ Menu:
                 YB = Console.ReadLine()
                 Console.Write("Entrez Zb : ")
                 ZB = Console.ReadLine()
-                If (XA * YB * ZA) - (YA * XB * ZB) = 0 Then
+
+                XBA = XA / XB
+                YBA = YA / YB
+                ZBA = ZA / ZB
+
+                If XBA = YBA = ZBA Then
                     Console.WriteLine("Verdict : Les Vecteurs sont Colinéaire")
                 Else
                     Console.WriteLine("Verdict : Les Vecteurs ne sont pas Colinéaires")
