@@ -10,10 +10,14 @@ Compatibilitée
 
 | Plateforme    | Nom                           | Supportée ? | Testée ? |
 |:-------------:|:----------------------------- |:-----------:|:--------:|
+| z80           | Ti-73                         | **NON**     | OUI      |
+| z80           | Ti-76                         | *N/A*       | **NON**  |
+| z80           | Ti-82 Stat                    | **NON**     | OUI      |
+| z80           | Ti-82 Plus                    | *N/A*       | **NON**  |
 | z80           | Ti-83 (+)                     | OUI         | OUI      |
+| z80           | Ti-83 Premium CE              | *N/A*       | **NON**  |
 | z80           | Ti-84 (+)                     | OUI         | OUI      |
 | z80           | Ti-84 + C Silver Edition      | OUI         | OUI      |
-| z80           | Ti-73                         | **NON**     | OUI      |
 | 68k           | Ti-89                         | OUI         | OUI      |
 | 68k           | Ti-89 Titanium                | OUI         | OUI      |
 | ARM           | Ti-Nspire (Base et CAS)       | **NON**     | **NON**  |

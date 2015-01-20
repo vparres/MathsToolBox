@@ -2,7 +2,7 @@
 Prgm
 ClrIO
 Disp "=========================="," Maths Tool Box By VPARRES","=========================="
-Disp "    Version 0.4.3b TI"
+Disp "    Version 0.4.4b TI"
 Disp "       Press Enter"
 Pause
 
@@ -151,6 +151,8 @@ ElseIf choix=2 Then
 Goto a3pt
 ElseIf choix=3 Then 
 Goto veccoli
+ElseIf choix=4 Then
+Goto disvec
 ElseIf choix=6 Then 
 Goto menu
 Else
@@ -204,12 +206,89 @@ Disp "Terminé"
 
 ClrIO
 Disp "=== Coordonnées Vect ==="
+Disp "Xab = "&l
+Disp "Yab = "&m
+Disp "Zab = "&n
+Pause
+
+Dialog
+Title "Distance vecteur"
+Text "Voulez-vous calculer"
+Text "la distance du vecteur ?"
+EndDlog
+If ok=1 Then 
+string(a)a
+string(b)b
+string(c)c
+string(d)d
+string(e)e
+string(f)f
+Goto disvecbp
+Else
+Dialog
+Title "Nettoyage"
+Text "Voulez-vous nettoyer"
+Text "les Variables ?"
+EndDlog
+If ok=1 Then 
+Goto netvar
+Else
+Goto menu
+EndIf
+EndIf
+
+Lbl disvec
+ClrIO
+Disp "== Distance Vecteurs =="
+Disp "Entrée des valeurs ..."
+Dialog
+Title "Distance Vect"
+Request "Xa ",a,0
+Request "Ya ",b,0
+Request "Za ",c,0
+EndDlog
+Dialog
+Title "Distance Vect"
+Request "Xb ",d,0
+Request "Yb ",e,0
+Request "Zb ",f,0
+EndDlog
+ClrIO
+Disp "== Distance Vecteurs =="
+Disp "Xa = "&a&"       Xb = "&d
+Disp "Ya = "&b&"       Yb = "&e
+Disp "Za = "&c&"       Zb = "&f
+Pause
+Lbl disvecbp
+Disp "Calculs en cours 1/2..."
+expr(a)a
+expr(b)b
+expr(c)c
+expr(d)d
+expr(e)e
+expr(f)f
+d-ag
+e-bh
+f-ci
+Disp "Terminé"
+
+Disp "Calculs en cours 2/2..."
+g^2+h^2+i^2j
+¨(j)k
+string(g)l
+string(h)m
+string(i)n
+string(j)o
+string(k)p
+Disp "Terminé"
+
+ClrIO
+Disp "== Distance Vecteurs =="
 Disp "AB² = Xab² + Yab² + Zab²"
 Disp "AB² = "&l&"² + "&m&"² + "&n&"²"
 Disp "AB² = "&o
 Disp "¨(AB) = "&p
 Pause
-
 Dialog
 Title "Nettoyage"
 Text "Voulez-vous nettoyer"
@@ -366,7 +445,7 @@ Dialog
 Title "A Propos"
 Text "Maths ToolBox"
 Text "Auteur : Vincent PARRES (vparres)"
-Text "Version : 0.4.3b TI"
+Text "Version : 0.4.4b TI"
 Text "Platforme : 68k"
 EndDlog
 Goto menu

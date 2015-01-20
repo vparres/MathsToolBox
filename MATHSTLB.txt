@@ -1,7 +1,7 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.4.3bTI"
+Disp "Version 0.4.4bTI"
 Disp "  Press Enter"
 Pause 
 
@@ -72,7 +72,7 @@ Goto 0
 
 Lbl VD
 ClrHome
-Menu("Vecteurs 3D","Coord Vect",C,"Align 3 Pts",PT,"Vect Coliné",VC,"Distance Vect",ER,"Quadrlatr //",ER,"Retour Menu",0
+Menu("Vecteurs 3D","Coord Vect",C,"Align 3 Pts",PT,"Vect Coliné",VC,"Distance Vect",DV,"Quadrlatr //",ER,"Retour Menu",0
 
 Lbl PT
 Disp "= Align 3 Pts ="
@@ -124,10 +124,32 @@ Disp "Yab = ",H
 Disp "Zab = ",I
 Pause 
 ClrHome
+Menu("Calc distance ?","Oui",P,"Non",0)
+
+Lbl DV
+ClrHome
+Disp "== Dist Vect =="
+Input "Xa=",A
+Input "Ya=",B
+Input "Za=",C
+Input "Xb=",D
+Input "Yb=",E
+Input "Zb=",F
+Lbl P
+D-A→G
+E-B→H
+F-C→I
+ClrHome
+Disp "== Dist Vect =="
+Disp "Xab = ",G
+Disp "Yab = ",H
+Disp "Zab = ",I
+Pause 
+ClrHome
 G²+H²+I²→J
 √(J)→K
 
-Disp "== Coord Vect =="
+Disp "== Dist Vect =="
 Disp "Xab²+Yab²+Zab²"
 Disp "AB² = ",J►Frac
 Disp "√(AB) = ",K►Frac
@@ -163,7 +185,7 @@ ClrHome
 Disp " Maths Tool Box "
 Disp "=== A Propos ==="
 Disp "Auteur:VPARRES"
-Disp "Version:0.4.3bTI"
+Disp "Version:0.4.4bTI"
 Disp "Platforme:z80"
 Disp ""
 Disp "Retour au Menu"
