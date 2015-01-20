@@ -1,7 +1,7 @@
 ClrHome
 Disp "================"," Maths Tool Box","   By VPARRES","================"
 Disp ""
-Disp "Version 0.4.2bTI"
+Disp "Version 0.4.3bTI"
 Disp "  Press Enter"
 Pause 
 
@@ -15,8 +15,60 @@ Menu("Maths Tool Box","A Propos …",AP,"Quitter …",Q
 
 Lbl V
 ClrHome
-Menu("Vecteurs 2D","Tri Rect ?",ER,"Droite //",ER,"Retour Menu",0
+Menu("Vecteurs 2D","Tri Rect ?",TR,"Droite //",DP,"Retour Menu",0
 
+Lbl TR
+Disp "=== Tri Rect ==="
+Input "A=",A
+Input "B=",B
+Input "C=",C
+
+C²→C
+A²+B²→D
+
+ClrHome
+Disp "=== Tri Rect ===",""
+Disp "Verdict :"
+If C=D
+Then
+Disp "Le Triangle est","Rectangle"
+Else
+Disp "Le Triangle","n'est"
+Disp "pas Rectangle."
+End
+Pause 
+Goto 0
+
+Lbl DP
+Disp "= Droites // ="
+Input "Xa=",A
+Input "Ya=",B
+Input "Xb=",C
+Input "Yb=",D
+Input "Xc=",E
+Input "Yc=",F
+Input "Xd=",G
+Input "Yd=",H
+
+C-A→A
+F-H→B
+D-B→C
+E-G→D
+A*B→E
+C*D→F
+E-F→G
+
+ClrHome
+Disp "= Droites // =",""
+Disp "Verdict:"
+If G=0
+Then
+Disp "Les Droites","sont parallèles"
+Else
+Disp "Les Droites ne","sont pas","parallèles."
+End
+Pause 
+Goto 0
 
 Lbl VD
 ClrHome
@@ -111,7 +163,7 @@ ClrHome
 Disp " Maths Tool Box "
 Disp "=== A Propos ==="
 Disp "Auteur:VPARRES"
-Disp "Version:0.4.2bTI"
+Disp "Version:0.4.3bTI"
 Disp "Platforme:z80"
 Disp ""
 Disp "Retour au Menu"

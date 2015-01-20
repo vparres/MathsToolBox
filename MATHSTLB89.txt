@@ -2,7 +2,7 @@
 Prgm
 ClrIO
 Disp "=========================="," Maths Tool Box By VPARRES","=========================="
-Disp "    Version 0.4.2b TI"
+Disp "    Version 0.4.3b TI"
 Disp "       Press Enter"
 Pause
 
@@ -11,55 +11,151 @@ ClrIO
 Dialog
 Title "Maths Toolbox by VPARRES"
 Text "Menu Principal"
-DropDown "Faites votre choix:", {"Vecteurs 2D", "Vecteurs 3D", "A Propos","NetVars", "Quitter"}, choix
+DropDown "Faites votre choix:",{"Vecteurs 2D","Vecteurs 3D","A Propos","NetVars","Quitter"},choix
 EndDlog
 If choix=1 Then 
-Goto V2D
-ElseIf choix=2
-Goto V3D
-ElseIf choix=3
-Goto AP
-ElseIf choix=4
+Goto v2d
+ElseIf choix=2 Then 
+Goto v3d
+ElseIf choix=3 Then 
+Goto ap
+ElseIf choix=4 Then 
 Goto netvar
-ElseIf choix=5
-Goto Q
+ElseIf choix=5 Then 
+Goto q
 Else
 Goto error
-Endif
+EndIf
 
-Lbl V2D
+Lbl v2d
 Dialog
 Title "Maths Toolbox by VPARRES"
 Text "Vecteurs 2D"
-DropDown "Choix:", {"Tri Rect ?", "Droite //", "Retour Menu"}, choix
+DropDown "Choix:",{"Tri Rect ?","Droite //","Retour Menu"},choix
 EndDlog
 If choix=1 Then 
-Goto noimpl
-ElseIf choix=2
-Goto noimpl
-ElseIf choix=3
+Goto trirec
+ElseIf choix=2 Then 
+Goto drtprl
+ElseIf choix=3 Then 
 Goto menu
 Else
 Goto error
-Endif
+EndIf
 
-Lbl V3D
+Lbl trirec
+ClrIO
+Disp "== Triangle Rectangle =="
+Disp "Entrée des valeurs ..."
+Dialog
+Title "Tri Rect"
+Request "A: ",a,0
+Request "B: ",b,0
+Request "C: ",c,0
+EndDlog
+Disp "Calculs en cours ..."
+expr(a)a
+expr(b)b
+expr(c)c
+a^2a
+b^2b
+c^2c
+a+bd
+Disp "Terminé !"
+Disp "Affichage du résultat :"
+ClrIO
+Disp "Verdict :"
+If c=d Then 
+Disp "Le Triangle est Rectangle"
+Else
+Disp "Le Triangle n'est pas","Rectangle."
+EndIf
+Pause
+Dialog
+Title "Nettoyage"
+Text "Voulez-vous nettoyer"
+Text "les Variables ?"
+EndDlog
+If ok=1 Then 
+Goto netvar
+Else
+Goto menu
+EndIf
+
+Lbl drtprl
+ClrIO
+Disp "====== Droites // ======"
+Disp "Entrée des valeurs ..."
+Dialog
+Title "Droites //"
+Request "Xa: ",a,0
+Request "Ya: ",b,0
+Request "Xb: ",c,0
+Request "Yb: ",d,0
+EndDlog
+Dialog
+Title "Droites //"
+Request "Xc: ",e,0
+Request "Yc: ",f,0
+Request "Xd: ",g,0
+Request "Yd: ",h,0
+EndDlog
+Disp "Calculs en cours 1/2..."
+expr(a)a
+expr(b)b
+expr(c)c
+expr(d)d
+expr(e)e
+expr(f)f
+expr(g)g
+expr(h)h
+c-aa
+f-hb
+d-bc
+e-gd
+Disp "Terminé !"
+Disp "Calculs en cours 2/2..."
+a*be
+c*df
+e-fg
+Disp "Terminé !"
+Disp "Affichage du résultat :"
+ClrIO
+Disp "Verdict :"
+If g=0 Then 
+Disp "Les Droites sont parallèles"
+Else
+Disp "Les Droites ne sont pas","parallèles."
+EndIf
+Pause
+Dialog
+Title "Nettoyage"
+Text "Voulez-vous nettoyer"
+Text "les Variables ?"
+EndDlog
+If ok=1 Then 
+Goto netvar
+Else
+Goto menu
+EndIf
+
+Lbl v3d
 Dialog
 Title "Maths Toolbox by VPARRES"
 Text "Vecteurs 3D"
-DropDown "Choix:", {"Coord Vect", "Align 3 Pts", "Vect Coliné", "Distance Vect", "Quadrlatr //", "Retour Menu"}, choix
+DropDown "Choix:",{"Coord Vect","Align 3 Pts","Vect Coliné","Distance Vect","Quadrlatr //","Retour Menu"},choix
 EndDlog
 If choix=1 Then 
 Goto coorvec
-ElseIf choix=2
-Goto A3PT
-ElseIf choix=3
+ElseIf choix=2 Then 
+Goto a3pt
+ElseIf choix=3 Then 
 Goto veccoli
-ElseIf choix=6
+ElseIf choix=6 Then 
 Goto menu
 Else
 Goto noimpl
-Endif
+EndIf
 
 Lbl coorvec
 ClrIO
@@ -67,51 +163,51 @@ Disp "=== Coordonnées Vect ==="
 Disp "Entrée des valeurs ..."
 Dialog
 Title "Coord Vect"
-Request "Xa ",A,0
-Request "Ya ",B,0
-Request "Za ",C,0
+Request "Xa ",a,0
+Request "Ya ",b,0
+Request "Za ",c,0
 EndDlog
 Dialog
 Title "Coord Vect"
-Request "Xb ",D,0
-Request "Yb ",E,0
-Request "Zb ",F,0
+Request "Xb ",d,0
+Request "Yb ",e,0
+Request "Zb ",f,0
 EndDlog
 ClrIO
 Disp "=== Coordonnées Vect ==="
-Disp "Xa = "&A&"       Xb = "&D
-Disp "Ya = "&B&"       Yb = "&E
-Disp "Za = "&C&"       Zb = "&F
+Disp "Xa = "&a&"       Xb = "&d
+Disp "Ya = "&b&"       Yb = "&e
+Disp "Za = "&c&"       Zb = "&f
 Pause
 
 Disp "Calculs en cours 1/2..."
-Expr(A)A
-Expr(B)B
-Expr(C)C
-Expr(D)D
-Expr(E)E
-Expr(F)F
-D-AG
-E-BH
-F-CI
+expr(a)a
+expr(b)b
+expr(c)c
+expr(d)d
+expr(e)e
+expr(f)f
+d-ag
+e-bh
+f-ci
 Disp "Terminé"
 
 Disp "Calculs en cours 2/2..."
-G^2+H^2+I^2J
-¨(J)K
-String(G)L
-String(H)M
-String(I)N
-String(J)O
-String(K)P
+g^2+h^2+i^2j
+¨(j)k
+string(g)l
+string(h)m
+string(i)n
+string(j)o
+string(k)p
 Disp "Terminé"
 
 ClrIO
 Disp "=== Coordonnées Vect ==="
 Disp "AB² = Xab² + Yab² + Zab²"
-DIsp "AB² = "&L&"² + "&M&"² + "&N&"²"
-Disp "AB² = "&O
-Disp "¨(AB) = "&P
+Disp "AB² = "&l&"² + "&m&"² + "&n&"²"
+Disp "AB² = "&o
+Disp "¨(AB) = "&p
 Pause
 
 Dialog
@@ -119,70 +215,70 @@ Title "Nettoyage"
 Text "Voulez-vous nettoyer"
 Text "les Variables ?"
 EndDlog
-If ok=1 then
+If ok=1 Then 
 Goto netvar
-Else 
+Else
 Goto menu
-Endif
+EndIf
 
-Lbl A3PT
+Lbl a3pt
 ClrIO
 Disp "== Alignement de 3 Pts =="
 Disp "Entrée des valeurs ..."
 Dialog
 Title "Align 3 Pts"
-Request "Xa ",A,0
-Request "Ya ",B,0
-Request "Za ",C,0
-Request "Xb ",D,0
+Request "Xa ",a,0
+Request "Ya ",b,0
+Request "Za ",c,0
+Request "Xb ",d,0
 EndDlog
 Dialog
 Title "Align 3 Pts"
-Request "Yb ",E,0
-Request "Zb ",F,0
-Request "Xc ",G,0
-Request "Yc ",H,0
-Request "Zc ",I,0
+Request "Yb ",e,0
+Request "Zb ",f,0
+Request "Xc ",g,0
+Request "Yc ",h,0
+Request "Zc ",i,0
 EndDlog
 Disp "Calcul en cours ..."
-Expr(A)A
-Expr(B)B
-Expr(C)C
-Expr(D)D
-Expr(E)E
-Expr(F)F
-Expr(G)G
-Expr(H)H
-Expr(I)I
-D-AJ
-E-BK
-F-CL
-G-AM
-H-BN
-I-CO
-J/KP
-K/NQ
-L/OR
+expr(a)a
+expr(b)b
+expr(c)c
+expr(d)d
+expr(e)e
+expr(f)f
+expr(g)g
+expr(h)h
+expr(i)i
+d-aj
+e-bk
+f-cl
+g-am
+h-bn
+i-co
+j/kp
+k/nq
+l/or
 Disp "Terminé !"
 
 ClrIO
 Disp "== Alignement de 3 Pts ==","","Verdict :"
-If P=Q and Q=R Then
+If p=q and q=r Then 
 Disp "ABC sont alignés"
 Else
 Disp "ABC non alignés"
 EndIf
-Pause 
+Pause
 Dialog
 Title "Nettoyage"
 Text "Voulez-vous nettoyer"
 Text "les Variables ?"
 EndDlog
-If ok=1 then
+If ok=1 Then 
 Goto netvar
-Else 
+Else
 Goto menu
-Endif
+EndIf
 
 Lbl veccoli
 ClrIO
@@ -190,90 +286,90 @@ Disp "=== Vect Colinéaires ==="
 Disp "Entrée des valeurs ..."
 Dialog
 Title "Vect Coliné"
-Request "Xa ",A,0
-Request "Ya ",B,0
-Request "Za ",C,0
+Request "Xa ",a,0
+Request "Ya ",b,0
+Request "Za ",c,0
 EndDlog
 Dialog
 Title "Vect Coliné"
-Request "Xb ",D,0
-Request "Yb ",E,0
-Request "Zb ",F,0
+Request "Xb ",d,0
+Request "Yb ",e,0
+Request "Zb ",f,0
 EndDlog
 ClrIO
 Disp "=== Vect Colinéaires ==="
-Disp "Xa = "&A&"       Xb = "&D
-Disp "Ya = "&B&"       Yb = "&E
-Disp "Za = "&C&"       Zb = "&F
+Disp "Xa = "&a&"       Xb = "&d
+Disp "Ya = "&b&"       Yb = "&e
+Disp "Za = "&c&"       Zb = "&f
 Pause
 
 Disp "Calculs en cours ..."
-Expr(A)A
-Expr(B)B
-Expr(C)C
-Expr(D)D
-Expr(E)E
-Expr(F)F
-A/DG
-B/EH
-C/FI
+expr(a)a
+expr(b)b
+expr(c)c
+expr(d)d
+expr(e)e
+expr(f)f
+a/dg
+b/eh
+c/fi
 Disp "Terminé !"
 
 Disp "Affichage du résultat :"
 ClrIO
 Disp "Verdict :"
-If G=H and H=I Then
+If g=h and h=i Then 
 Disp "Les Vecteurs sont ","Colinéaires"
 Else
 Disp "Les Vecteurs ne sont","pas Colinéaires"
 EndIf
-Pause 
+Pause
 Dialog
 Title "Nettoyage"
 Text "Voulez-vous nettoyer"
 Text "les Variables ?"
 EndDlog
-If ok=1 then
+If ok=1 Then 
 Goto netvar
-Else 
+Else
 Goto menu
-Endif
+EndIf
 
 Lbl netvar
 Disp "Nettoyage des variables ..."
-DelVar A
-DelVar B
-DelVar C
-DelVar D
-DelVar E
-DelVar F
-DelVar G
-DelVar H
-DelVar I
-DelVar J
-DelVar K
-DelVar L
-DelVar M
-DelVar N
-DelVar O
-DelVar P
-DelVar Q
-DelVar R
-DelVar S
+DelVar a
+DelVar b
+DelVar c
+DelVar d
+DelVar e
+DelVar f
+DelVar g
+DelVar h
+DelVar i
+DelVar j
+DelVar k
+DelVar l
+DelVar m
+DelVar n
+DelVar o
+DelVar p
+DelVar q
+DelVar r
+DelVar s
 Disp "Terminé !"
 Pause
 Goto menu
 
-Lbl AP
+Lbl ap
 ClrIO
 Dialog
 Title "A Propos"
 Text "Maths ToolBox"
 Text "Auteur : Vincent PARRES (vparres)"
-Text "Version : 0.4.2b TI"
+Text "Version : 0.4.3b TI"
 Text "Platforme : 68k"
 EndDlog
-Goto Menu
+Goto menu
 
 Lbl noimpl
 ClrIO
@@ -294,7 +390,7 @@ Disp "Retour au Menu ..."
 Pause
 Goto menu
 
-Lbl Q
+Lbl q
 ClrIO
 Disp " Maths Tool Box By VPARRES","=========================="
 Disp "Press ESC to exit ..."
